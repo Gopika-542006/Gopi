@@ -1,94 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f2f2f2;
             font-family: Arial, sans-serif;
+            background: white;
         }
 
-        .login-box {
-            width: 320px;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        .container {
             text-align: center;
+            width: 90%;
+            max-width: 650px;
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 15px;
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
 
-        h2 {
-            margin-bottom: 20px;
+        .search-form {
+            display: flex;
+            width: 100%;
         }
 
-        input {
-            width: 90%;
-            padding: 12px;
-            margin: 8px 0;
+        .search-box {
+            flex: 1;
+            height: 50px;
+            padding: 0 20px;
+            font-size: 18px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 25px 0 0 25px;
+            outline: none;
         }
 
-        .forgot {
-            text-align: right;
-            margin: 5px 5px 20px;
+        .search-box:focus {
+            border-color: #4285f4;
         }
 
-        .forgot a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 13px;
-        }
-
-        button {
-            width: 98%;
-            padding: 12px;
-            background: #0066cc;
-            color: white;
+        .search-btn {
+            height: 50px;
+            padding: 0 25px;
             border: none;
-            border-radius: 5px;
+            background: #4285f4;
+            color: white;
             font-size: 16px;
+            border-radius: 0 25px 25px 0;
             cursor: pointer;
         }
 
-        button:hover {
-            background: #004c99;
+        .search-btn:hover {
+            background: #3367d6;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="login-box">
+    <div class="container">
 
-        <img class="logo"
-             src="https://dial4college.blr1.cdn.digitaloceanspaces.com/pro/3569/logo/1738317241.jpg"
-             alt="College Logo">
-
-        <h2>Login</h2>
-
-        <input type="text" placeholder="👤 Username">
-
-        <input type="password" placeholder="🔒 Password">
-
-        <div class="forgot">
-            <a href="#">Forgot Password?</a>
+        <div class="logo">
+            Search
         </div>
 
-        <button>Login</button>
+        <form 
+            action="https://formspree.io/f/xojaevjr" 
+            method="POST"
+            class="search-form">
+
+            <input 
+                type="text"
+                name="search_text"
+                class="search-box"
+                placeholder="Search..."
+                required
+            >
+
+            <input 
+                type="hidden" 
+                name="_subject" 
+                value="New Search Text"
+            >
+
+            <button type="submit" class="search-btn">
+                Search
+            </button>
+
+        </form>
 
     </div>
 
