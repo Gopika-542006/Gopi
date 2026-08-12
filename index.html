@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>College Login</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
 
@@ -25,70 +25,68 @@
             width: 350px;
             padding: 30px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
         }
 
-        /* Logo */
         .logo {
-            display: block;
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
-            margin: 0 auto 15px;
+            margin-bottom: 10px;
         }
 
         h2 {
-            text-align: center;
+            color: #b40000;
             margin-bottom: 25px;
-            color: #333;
         }
 
         .input-box {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            padding: 10px;
+            text-align: left;
+            margin-bottom: 18px;
         }
 
-        .input-box span {
-            font-size: 20px;
-            margin-right: 10px;
+        .input-box label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
         }
 
         .input-box input {
             width: 100%;
-            border: none;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
             outline: none;
-            font-size: 15px;
         }
 
-        .forgot {
-            text-align: right;
-            margin-bottom: 20px;
+        .input-box input:focus {
+            border-color: #b40000;
         }
 
-        .forgot a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        button {
+        .login-btn {
             width: 100%;
             padding: 12px;
             border: none;
-            border-radius: 5px;
-            background: #0066cc;
+            border-radius: 6px;
+            background: #b40000;
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
-        button:hover {
-            background: #004c99;
+        .login-btn:hover {
+            background: #8f0000;
+        }
+
+        .forgot {
+            display: block;
+            margin-top: 15px;
+            color: #b40000;
+            text-decoration: none;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -97,28 +95,31 @@
 
     <div class="login-box">
 
-        <!-- Logo -->
-        <img src="https://dial4college.com/college/adhiparasakthi-engineering-college-kancheepuram" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwT3bgmQDmyr8dmnehM_ysl_9iEDE4vSHpbBa1WLf8w&s=10" class="logo">
 
-        <h2>Login</h2>
+        <h2>Student Login</h2>
 
-        <div class="input-box">
-            <span>👤</span>
-            <input type="text" placeholder="Username">
-        </div>
+        <form>
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+            </div>
 
-        <div class="input-box">
-            <span>🔒</span>
-            <input type="password" placeholder="Password">
-        </div>
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
 
-        <div class="forgot">
-            <a href="#">Forgot Password?</a>
-        </div>
+            <button type="submit" class="login-btn">Login</button>
 
-        <button>Login</button>
+            <a href="#" class="forgot">Forgot Password?</a>
+        </form>
 
     </div>
 
 </body>
 </html>
+
+
+    
+
